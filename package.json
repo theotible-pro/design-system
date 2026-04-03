@@ -1,6 +1,10 @@
 {
   "name": "@theotible/design-system",
   "version": "0.1.0",
+  "repository": {
+  "type": "git",
+  "url": "https://github.com/theotible-pro/design-system.git"
+},
   "type": "module",
   "main": "./dist/index.cjs",
   "module": "./dist/index.js",
