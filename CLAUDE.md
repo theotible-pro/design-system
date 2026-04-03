@@ -35,3 +35,43 @@ Conçue pour être utilisée dans Fast Renamer, Wealthcome, et tout futur projet
 
 ## GitHub
 github.com/theotible-pro/design-system
+
+## Composants disponibles
+
+### Button
+Fichier : `src/components/ui/button.tsx`
+Story : `src/stories/Button.stories.tsx`
+
+**Variants**
+- `default` / `primary` — action principale
+- `secondary` — action secondaire
+- `ghost` — discret, sans fond
+- `destructive` — action dangereuse
+
+**Tailles**
+- `sm` — petite
+- `md` — medium (défaut)
+- `lg` — large
+
+**Props spéciales**
+- `loading?: boolean` — affiche un spinner, désactive le bouton
+- `iconLeft?: ReactNode` — icône avant le texte
+- `iconRight?: ReactNode` — icône après le texte
+- `iconOnly?: boolean` — bouton carré avec icône seule
+
+**Usage**
+```tsx
+import { Button } from "@/components/ui/button"
+
+// Basique
+<Button variant="default" size="md">Renommer</Button>
+
+// Avec icône
+<Button variant="default" iconLeft={<Check size={16} />}>Renommer</Button>
+
+// Loading
+<Button variant="default" loading>En cours...</Button>
+
+// Disabled
+<Button variant="default" disabled>Indisponible</Button>
+```
