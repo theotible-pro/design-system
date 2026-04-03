@@ -1,8 +1,24 @@
 {
-  "name": "figma-plugin",
-  "private": true,
-  "version": "0.0.0",
+  "name": "@theotible/design-system",
+  "version": "0.1.0",
   "type": "module",
+  "main": "./dist/index.cjs",
+  "module": "./dist/index.js",
+  "types": "./dist/index.d.ts",
+  "exports": {
+    ".": {
+      "import": "./dist/index.js",
+      "require": "./dist/index.cjs",
+      "types": "./dist/index.d.ts"
+    },
+    "./dist/style.css": "./dist/style.css"
+  },
+  "files": [
+    "dist"
+  ],
+  "publishConfig": {
+    "registry": "https://npm.pkg.github.com"
+  },
   "scripts": {
     "dev": "vite",
     "build": "vite build",
@@ -10,6 +26,10 @@
     "preview": "vite preview",
     "storybook": "storybook dev -p 6006",
     "build-storybook": "storybook build"
+  },
+  "peerDependencies": {
+    "react": "^19.0.0",
+    "react-dom": "^19.0.0"
   },
   "dependencies": {
     "@fontsource-variable/inter": "^5.2.8",
@@ -20,8 +40,6 @@
     "clsx": "^2.1.1",
     "lucide-react": "^1.7.0",
     "radix-ui": "^1.4.3",
-    "react": "^19.2.4",
-    "react-dom": "^19.2.4",
     "shadcn": "^4.1.2",
     "tailwind-merge": "^3.5.0",
     "tailwindcss": "^4.2.2",
@@ -49,6 +67,7 @@
     "prop-types": "^15.8.1",
     "storybook": "^10.3.4",
     "typescript": "^6.0.2",
+    "vite-plugin-dts": "^4.5.4",
     "vite": "^8.0.1",
     "vitest": "^4.1.2"
   }
