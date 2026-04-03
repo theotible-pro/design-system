@@ -1,0 +1,22 @@
+[21:49:11.278] [INFO] storybook v10.3.4
+[21:49:11.525] [DEBUG] Getting package.json info for /Users/theotible/design-system/package.json...
+[21:49:12.335] [DEBUG] Serving static files from [36mnode_modules/@chromatic-com/storybook/assets[39m at [36m/addon-visual-tests-assets[39m
+[21:49:12.335] [INFO] Starting...
+[21:49:12.339] [WARN] unable to find package.json for radix-ui
+[21:49:12.438] [DEBUG] Starting preview..
+[21:49:12.537] [DEBUG] Using tsconfig paths for react-docgen
+[21:49:12.556] [ERROR] Failed to build the preview
+[21:49:12.558] [ERROR] [38;2;241;97;97mReferenceError: __dirname is not defined[39m
+    at Object.viteFinal (file://./.storybook/main.js:24:27)
+    at file://./node_modules/storybook/dist/_node-chunks/chunk-3LP2BDDH.js:10114:36
+    at async createViteServer (file://./node_modules/@storybook/builder-vite/dist/index.js:1532:21)
+    at async Module.start (file://./node_modules/@storybook/builder-vite/dist/index.js:1557:17)
+    at async storybookDevServer (file://./node_modules/storybook/dist/core-server/index.js:7503:83)
+    at async buildOrThrow (file://./node_modules/storybook/dist/core-server/index.js:4508:12)
+    at async buildDevStandalone (file://./node_modules/storybook/dist/core-server/index.js:8033:41)
+    at async withTelemetry (file://./node_modules/storybook/dist/_node-chunks/chunk-HUYNFPPD.js:225:12)
+    at async dev (file://./node_modules/storybook/dist/bin/core.js:2736:3)
+    at async _Command.<anonymous> (file://./node_modules/storybook/dist/bin/core.js:2806:92)
+[21:49:12.560] [WARN] Broken build, fix the error above.
+You may need to refresh the browser.
+[21:49:20.327] [PROMPT] Would you like to send anonymous crash reports to improve Storybook and fix bugs faster? {"choice":true}
