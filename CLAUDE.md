@@ -1,5 +1,4 @@
 # Design System
-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
 
 ## Contexte
 Librairie de composants React générique, importable dans tous les projets.
