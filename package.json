@@ -1,6 +1,6 @@
 {
   "name": "@theotible-pro/design-system",
-  "version": "0.1.0",
+  "version": "0.1.1",
   "repository": {
     "type": "git",
     "url": "git+https://github.com/theotible-pro/design-system.git"
@@ -13,9 +13,10 @@
     ".": {
       "import": "./dist/index.js",
       "require": "./dist/index.cjs",
-      "types": "./dist/index.d.ts"
+      "types": "./dist/src/index.d.ts"
     },
-    "./dist/style.css": "./dist/style.css"
+    "./dist/style.css": "./dist/style.css",
+    "./dist/index.css": "./dist/index.css"
   },
   "files": [
     "dist"
