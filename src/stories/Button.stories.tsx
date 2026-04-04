@@ -1,5 +1,7 @@
+import React from "react"
 import type { Meta, StoryObj } from "@storybook/react"
 import { fn } from "storybook/test"
+import * as Icons from "lucide-react"
 import {
   ArrowRight,
   Download,
@@ -63,12 +65,43 @@ type Story = StoryObj<typeof meta>
 // Playground (default, all controls available)
 // ---------------------------------------------------------------------------
 
+const ICON_OPTIONS = ["none", "Plus", "Check", "Save", "Trash2", "ArrowRight", "Download", "Search", "X", "Star", "Settings"] as const
+
+function resolveIcon(name: unknown): React.ReactNode {
+  if (!name || name === "none") return undefined
+  const Icon = (Icons as Record<string, React.ComponentType>)[name as string]
+  return Icon ? <Icon /> : undefined
+}
+
 export const Playground: Story = {
+  argTypes: {
+    iconLeft: {
+      control: "select",
+      options: ICON_OPTIONS,
+      description: "Icon on the left — select a Lucide icon name",
+    },
+    iconRight: {
+      control: "select",
+      options: ICON_OPTIONS,
+      description: "Icon on the right — select a Lucide icon name",
+    },
+  },
   args: {
     children: "Button",
     variant: "primary",
     size: "md",
+    // @ts-expect-error — Storybook passes a string key; render fn resolves it to ReactNode
+    iconLeft: "none",
+    // @ts-expect-error — same as above
+    iconRight: "none",
   },
+  render: ({ iconLeft, iconRight, ...args }) => (
+    <Button
+      {...args}
+      iconLeft={resolveIcon(iconLeft)}
+      iconRight={resolveIcon(iconRight)}
+    />
+  ),
 }
 
 // ---------------------------------------------------------------------------
