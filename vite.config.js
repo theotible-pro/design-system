@@ -30,6 +30,7 @@ export default defineConfig({
           'react-dom': 'ReactDOM',
           'react/jsx-runtime': 'jsx',
         },
+        assetFileNames: 'style.css',
       },
     },
   },
